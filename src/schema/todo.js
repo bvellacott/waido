@@ -7,10 +7,11 @@ var idCount = 0;
 export const schema = new _schema.Entity('todos');
 
 export function normalize(todo) { 
-	return Map(_normalize(todo, schema));
+	var norm = Map(_normalize(todo, schema));
+	return norm;
 };
 
 export function create(text, completed = false) {
 	idCount++;
-	return normalize({ id: idCount, text, completed });
+	return Map({ id: idCount, text, completed });
 }
