@@ -2,18 +2,22 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.scss';
 import { Route, Link } from 'react-router'
+import { connect } from 'react-redux'
+
+import { addTodo } from './actions/todo'
 
 import Footer from './components/Footer'
 import AddTodo from './containers/AddTodo'
 import VisibleTodoList from './containers/VisibleTodoList'
+import Button from './components/Button';
 
-const App = () => (
+let App = ({ dispatch }) => (
   <div>
-    <AddTodo />
+    <Button position="static" show="true" onClick={ e => dispatch(addTodo({ text: '', completed: false, selected: true }))} text="Add todo"/>
     <VisibleTodoList />
-    <Footer />
   </div>
 )
+    // <Footer />
 
 // class App extends Component {
 //   render() {
@@ -35,5 +39,6 @@ const App = () => (
 //     );
 //   }
 // }
+App = connect()(App)
 
 export default App;

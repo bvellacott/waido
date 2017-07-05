@@ -1,0 +1,26 @@
+{
+  "name": "wailo",
+  "description": "A task list",
+  "main": "index.js",
+  "authors": [
+    "Benjamin Vellacott"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "todo",
+    "task",
+    "react",
+    "redux"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "^4.7.0"
+  }
+}

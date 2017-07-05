@@ -7,9 +7,10 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 // import '../node_modules/@salesforce-ux/design-system/assets/styles/salesforce-lightning-design-system.css';
+import 'font-awesome/css/font-awesome.css';
 import './index.scss';
 
-import { store, history } from './Framework';
+import store, { history } from './Store';
 
 ReactDOM.render(
   <Provider store={store}>

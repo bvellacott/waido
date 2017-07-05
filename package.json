@@ -15,7 +15,11 @@
     "react-router-redux": "^4.0.8",
     "redux": "^3.6.0",
     "redux-devtools": "^3.4.0",
-    "redux-immutable": "^4.0.0"
+    "redux-immutable": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-saga": "^0.15.4",
+    "reselect": "^3.0.1",
+    "socket.io": "^2.0.3"
   },
   "devDependencies": {
     "autoprefixer": "7.1.0",
@@ -23,6 +27,7 @@
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
     "babel-loader": "7.0.0",
+    "babel-plugin-transform-regenerator": "^6.24.1",
     "babel-preset-react-app": "^3.0.0",
     "babel-runtime": "6.23.0",
     "case-sensitive-paths-webpack-plugin": "1.1.4",
@@ -86,7 +91,8 @@
     ],
     "moduleNameMapper": {
       "^react-native$": "react-native-web"
-    }
+    },
+    "setupTestFrameworkScriptFile": "./testGlobals.js"
   },
   "babel": {
     "presets": [
@@ -95,5 +101,6 @@
   },
   "eslintConfig": {
     "extends": "react-app"
-  }
+  },
+  "proxy": "http://localhost:3333"
 }
